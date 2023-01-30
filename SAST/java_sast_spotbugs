@@ -1,0 +1,10 @@
+#!/bin/bash
+
+code_dir="code"
+
+# Run the SAST scan using the SpotBugs tool
+output=$(spotbugs -textui -progress -effort:max -results -outputFormat csv $code_dir)
+
+# Store the results in a CSV file
+filename="sast_results.csv"
+echo "$output" | sed 's/\([^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*\),\([^,]*\)/\1\n\2/' > $filename
