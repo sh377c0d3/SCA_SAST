@@ -53,7 +53,7 @@ if __name__ == '__main__':
     # Search the code base for sensitive data
     result = search_files(directory, pattern)
     # Save the result to a CSV file
-    save_to_csv(result, 'result.csv')
+    save_to_csv(result, 'hardcoded_secrets_result.csv')
 
 
     
