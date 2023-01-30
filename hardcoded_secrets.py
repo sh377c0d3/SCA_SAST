@@ -12,7 +12,7 @@ def get_pattern():
         re.compile(.........\.[Dd][Bb][^=:]*[:=].*,) # hardcoded database
         re.compile(AIza[0-9A-Za-z\\-_]{35}|[0-9]+-[0-9A-Za-z_]{32}\.apps\.googleusercontent\.com|ya29\\.[0-9A-Za-z\\-_]+) # Google key
         re.compile(crypt_key.*=.*.\w|private.*key|ssh-rsa*.*,|.secret.*.|.*_rsa|.*_dsa|.*_ed25519|.*_ecdsa|.?ssh/config) # crypto key
-        re.compile(.pem|.?mysql_history|.?s3cfg|.?htpasswd) # secret files
+        re.compile(.pem|.?mysql_history|.?s3cfg|.?htpasswd|.?htaccess) # secret files
         re.compile(.?aws/credentials|(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}|amzn\.mws\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}) #aws secrets and access keys
         re.compile(jenkins.plugins.publish_over_ssh.BapSshPublisherPlugin.xml|xox[baprs]-([0-9a-zA-Z]{10,48})?|hooks.slack.com|https://hooks.slack.com/services/T[a-zA-Z0-9_]{10}/B[a-zA-Z0-9_]{10}/[a-zA-Z0-9_]{24}) # jenkins and slack path
     ]
