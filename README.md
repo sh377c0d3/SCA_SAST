@@ -13,4 +13,4 @@ For specific code base SAST go ahead and view codes present in SAST folder. Don'
  
  Enjoy all the scripts! 
  
- ## Don't forget to Fork and Star this Repository # 😉
+ # Don't forget to Fork and Star this Repository 😉
