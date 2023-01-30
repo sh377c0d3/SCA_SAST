@@ -1,0 +1,10 @@
+#!/bin/bash
+
+code_dir="code"
+
+# Run the SCA scan using the OWASP Dependency Check tool
+output=$(dependency-check --scan $code_dir --format CSV)
+
+# Store the results in a CSV file
+filename="sca_results.csv"
+echo "$output" > $filename
